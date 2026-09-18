@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+
+.home-page{
+    background: #87CA86;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.hero{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.layer{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: auto;
+}
+
+.gallery-title {
+    font-family: "Jua", sans-serif;
+
+    color: #F1A4A4;
+    text-align: center;
+
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: white;
+
+    font-size: 96px;
+    font-weight: 400;
+}
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+    gap: 32px;
+
+    width: min(95%, 1400px);
+    margin: 0 auto;
+}
+
+
+.gallery-card {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+
+    border-radius: 26px;
+    border: 8px solid white;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-8px) scale(1.03);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.2);
+
+    border-color: #F1A4A4;
+}
+
+.gallery-card:active {
+    transform: scale(0.98);
+}
+
+.gallery-section {
+    padding: 120px 40px;
+}
